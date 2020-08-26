@@ -1,6 +1,6 @@
 const mysql = require('mysql') //exportando biblioteca
 
-const conexao = mysql.createConnection({
+const conexao = mysql.createConnection({ //criando conexão com o banco de dados 
     host     : '10.1.28.4',
     port     : 3306,
     user     : 'root',
