@@ -1,0 +1,797 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>ALSF</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link id="favicon" rel="shortcut icon" type="image/x-icon" href="http://172.16.0.10:8080/portal/api/servlet/image/01/custom/logo_image.png"/>
+
+      
+  <style type="text/css">
+    @page {  }
+      table { border-collapse:collapse; border-spacing:0; empty-cells:show }
+      td, th { vertical-align:top; font-size:10pt;}
+      h1, h2, h3, h4, h5, h6 { clear:both;}
+      p { white-space: nowrap; }
+      ol, ul { margin:0; padding:0;}
+      li { list-style: none; margin:0; padding:0;}
+      /* "li span.odfLiEnd" - IE 7 issue*/
+      li span. { clear: both; line-height:0; width:0; height:0; margin:0; padding:0; }
+      span.footnodeNumber { padding-right:1em; }
+      span.annotation_style_by_filter { font-size:95%; font-family:Arial; background-color:#fff000;  margin:0; border:0; padding:0;  }
+      span.heading_numbering { margin-right: 0.8rem; }* { margin:0;}
+      .ta1 { writing-mode:lr-tb; }
+      .Default { font-family:Liberation Sans; }
+      .ce1 { font-family:sans-serif
+  ; border-style:none; vertical-align:middle; text-align:center ! important; color:#000000; font-size:20pt; font-style:initial; text-shadow:none; text-decoration:none ! important; font-weight:bold; }
+      .ce10 { font-family:sans-serif
+  ; text-align:center ! important; margin-left:0mm; font-size:20pt; font-weight:bold; }
+      .ce12 { font-family:sans-serif
+  ; font-size:20pt; font-style:initial; text-shadow:none; text-decoration:none ! important; font-weight:bold; }
+      .ce13 { font-family:sans-serif
+  ; font-weight:bold; }
+      .ce2 { font-family:sans-serif
+  ; vertical-align:middle; text-align:center ! important; font-size:20pt; font-style:initial; text-shadow:none; text-decoration:none ! important; font-weight:bold; }
+      .ce24 { font-family:Liberation Sans; text-align:center ! important; margin-left:0mm; }
+      .ce3 { font-family:sans-serif
+  ; }
+      .ce4 { font-family:sans-serif
+  ; font-size:20pt; font-weight:bold; }
+      .ce41 { font-family:sans-serif
+; font-size:14pt; }
+      .ce5 { font-family:sans-serif
+  ; border-style:none; vertical-align:middle; text-align:center ! important; font-size:20pt; font-style:initial; text-shadow:none; text-decoration:none ! important; font-weight:bold; }
+      .ce6 { font-family:sans-serif
+  ; border-width:0.0709cm; border-style:solid; border-color:#000000; text-align:center ! important; margin-left:0mm; color:#000000; font-size:14pt; }
+      .ce7 { font-family:sans-serif
+  ; border-width:0.0709cm; border-style:solid; border-color:#000000; text-align:center ! important; margin-left:0mm; font-size:14pt; }
+      .ce8 { font-family:sans-serif
+  ; border-width:0.0709cm; border-style:solid; border-color:#000000; color:#000000; font-size:14pt; }
+      .ce9 { font-family:sans-serif
+  ; border-width:0.0709cm; border-style:solid; border-color:#000000; color:#000000; font-size:14pt; font-style:initial; text-shadow:none; text-decoration:none ! important; font-weight:initial; }
+      .co1 { width:7.67mm; }
+      .co10 { width:12.49mm; }
+      .co2 { width:8.01mm; }
+      .co3 { width:29.14mm; }
+      .co4 { width:6.4mm; }
+      .co5 { width:89.69mm; }
+      .co6 { width:3.19mm; }
+      .co7 { width:3.51mm; }
+      .co8 { width:6.09mm; }
+      .co9 { width:84.58mm; }
+      .ro1 { height:14.55mm; }
+      .ro2 { height:13.55mm; }
+      .ro3 { height:8.63mm; }
+      .ro4 { height:6.12mm; }
+      .ro5 { height:4.52mm; }
+      /* ODF styles with no properties representable as CSS */
+      { };
+ </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="http://www.franciscanosnaprovidencia.org.br/">Associação Lar São Francisco</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="#">Home</a></li>
+     <!---- <li><a href="http://glpi.alsf.local/ramais.html">Ramais</a></li> -->
+      <li><a href="http://glpi/front/ticket.form.php" target="blank">GLPI</a></li>
+      <li><a href="http://172.16.0.10:8080/portal/home" target="blank">Fluig</a></li>
+      <li><a href="https://outlook.office.com/mail/inbox" target="blank">E-mail</a></li>
+      <li><a href="http://alsf.rocket.chat/" target="blank">Rocket.chat</a></li>
+      <li><a href="javascript:criarPopup()">Manuais</a></li>
+      <li><a href="http://www.transparencia-alsf.org.br/">Portal Transparência</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container-fluid" align-self-lg-center>
+
+  <body dir="ltr">
+    <table border="0" cellspacing="0" cellpadding="0" class="ta1">
+       <colgroup>
+          <col width="34"/>
+          <col width="35"/>
+          <col width="127"/>
+          <col width="28"/>
+          <col width="392"/>
+          <col width="14"/>
+          <col width="15"/>
+          <col width="127"/>
+          <col width="27"/>
+          <col width="370"/>
+          <col width="55"/>
+          <col width="55"/>
+       </colgroup>
+       
+       <tr class="ro1">
+          <td colspan="12" style="text-align:left;width:7.67mm; " class="ce1">
+            
+             <h1>Lista de Ramais – Sede Administrativa</h1>
+             
+              <!--prestar atenção nesse trecho pode conter erros devido ao uso de duas versoes do boootstrap-->
+          </td>
+       </tr>
+       <tr class="ro3">
+          <td style="text-align:left;width:7.67mm; " class="ce3"> </td>
+          <td style="text-align:left;width:8.01mm; " class="ce3"> </td>
+          <td style="text-align:left;width:29.14mm; " class="ce3"> </td>
+          <td style="text-align:left;width:6.4mm; " class="ce3"> </td>
+          <td style="text-align:left;width:89.69mm; " class="ce3"> </td>
+          <td style="text-align:left;width:3.19mm; " class="ce3"> </td>
+          <td style="text-align:left;width:3.51mm; " class="ce3"> </td>
+          <td style="text-align:left;width:29.14mm; " class="ce12"> </td>
+          <td style="text-align:left;width:6.09mm; " class="ce4"> </td>
+          <td style="text-align:left;width:84.58mm; " class="ce13"> </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+       </tr>
+       <tr class="ro4">
+          <td style="text-align:left;width:7.67mm; " class="ce3"> </td>
+          <td style="text-align:left;width:8.01mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce6">
+             <p>237</p>
+          </td>
+          <td style="text-align:left;width:6.4mm; " class="ce3"> </td>
+          <td style="text-align:left;width:89.69mm; " class="ce8">
+             <p>Almoxarifado</p>
+          </td>
+          <td style="text-align:left;width:3.19mm; " class="ce3"> </td>
+          <td style="text-align:left;width:3.51mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce7">
+             <p>236</p>
+          </td>
+          <td style="text-align:left;width:6.09mm; " class="ce3"> </td>
+          <td style="text-align:left;width:84.58mm; " class="ce8">
+             <p>Fraternidade</p>
+          </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+       </tr>
+       <tr class="ro4">
+          <td style="text-align:left;width:7.67mm; " class="ce3"> </td>
+          <td style="text-align:left;width:8.01mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce6">
+             <p>217</p>
+          </td>
+          <td style="text-align:left;width:6.4mm; " class="ce3"> </td>
+          <td style="text-align:left;width:89.69mm; " class="ce8">
+             <p>Arquitetura / Engenharia </p>
+          </td>
+          <td style="text-align:left;width:3.19mm; " class="ce3"> </td>
+          <td style="text-align:left;width:3.51mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce7">
+             <p>234</p>
+          </td>
+          <td style="text-align:left;width:6.09mm; " class="ce3"> </td>
+          <td style="text-align:left;width:84.58mm; " class="ce8">
+             <p>Frei Francisco</p>
+          </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+       </tr>
+       <tr class="ro4">
+          <td style="text-align:left;width:7.67mm; " class="ce3"> </td>
+          <td style="text-align:left;width:8.01mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce6">
+             <p>205</p>
+          </td>
+          <td style="text-align:left;width:6.4mm; " class="ce3"> </td>
+          <td style="text-align:left;width:89.69mm; " class="ce9">
+             <p>Assessoria - Viviana </p>
+          </td>
+          <td style="text-align:left;width:3.19mm; " class="ce3"> </td>
+          <td style="text-align:left;width:3.51mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce7">
+             <p>226</p>
+          </td>
+          <td style="text-align:left;width:6.09mm; " class="ce3"> </td>
+          <td style="text-align:left;width:84.58mm; " class="ce8">
+             <p>Gráfica</p>
+          </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+       </tr>
+       <tr class="ro4">
+          <td style="text-align:left;width:7.67mm; " class="ce3"> </td>
+          <td style="text-align:left;width:8.01mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce6">
+             <p>240</p>
+          </td>
+          <td style="text-align:left;width:6.4mm; " class="ce3"> </td>
+          <td style="text-align:left;width:89.69mm; " class="ce9">
+             <p>Captação de recursos 1 </p>
+          </td>
+          <td style="text-align:left;width:3.19mm; " class="ce3"> </td>
+          <td style="text-align:left;width:3.51mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce7">
+             <p>228</p>
+          </td>
+          <td style="text-align:left;width:6.09mm; " class="ce3"> </td>
+          <td style="text-align:left;width:84.58mm; " class="ce8">
+             <p>Irma Clara</p>
+          </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+       </tr>
+       <tr class="ro4">
+          <td style="text-align:left;width:7.67mm; " class="ce3"> </td>
+          <td style="text-align:left;width:8.01mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce6">
+             <p>213</p>
+          </td>
+          <td style="text-align:left;width:6.4mm; " class="ce3"> </td>
+          <td style="text-align:left;width:89.69mm; " class="ce9">
+             <p>Captação de recursos 2</p>
+          </td>
+          <td style="text-align:left;width:3.19mm; " class="ce3"> </td>
+          <td style="text-align:left;width:3.51mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce7">
+             <p>210</p>
+          </td>
+          <td style="text-align:left;width:6.09mm; " class="ce3"> </td>
+          <td style="text-align:left;width:84.58mm; " class="ce8">
+             <p>Jurídico</p>
+          </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+       </tr>
+       <tr class="ro4">
+          <td style="text-align:left;width:7.67mm; " class="ce3"> </td>
+          <td style="text-align:left;width:8.01mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce6">
+             <p>254</p>
+          </td>
+          <td style="text-align:left;width:6.4mm; " class="ce3"> </td>
+          <td style="text-align:left;width:89.69mm; " class="ce9">
+             <p>Captação de recursos - Anderson</p>
+          </td>
+          <td style="text-align:left;width:3.19mm; " class="ce3"> </td>
+          <td style="text-align:left;width:3.51mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce7">
+             <p>235</p>
+          </td>
+          <td style="text-align:left;width:6.09mm; " class="ce3"> </td>
+          <td style="text-align:left;width:84.58mm; " class="ce8">
+             <p>Marcenaria </p>
+          </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+       </tr>
+       <tr class="ro4">
+          <td style="text-align:left;width:7.67mm; " class="ce3"> </td>
+          <td style="text-align:left;width:8.01mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce6">
+             <p>212</p>
+          </td>
+          <td style="text-align:left;width:6.4mm; " class="ce3"> </td>
+          <td style="text-align:left;width:89.69mm; " class="ce9">
+             <p>Casa do Frei</p>
+          </td>
+          <td style="text-align:left;width:3.19mm; " class="ce3"> </td>
+          <td style="text-align:left;width:3.51mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce7">
+             <p>220</p>
+          </td>
+          <td style="text-align:left;width:6.09mm; " class="ce3"> </td>
+          <td style="text-align:left;width:84.58mm; " class="ce8">
+             <p>Nílson</p>
+          </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+       </tr>
+       <tr class="ro4">
+          <td style="text-align:left;width:7.67mm; " class="ce3"> </td>
+          <td style="text-align:left;width:8.01mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce6">
+             <p>216</p>
+          </td>
+          <td style="text-align:left;width:6.4mm; " class="ce3"> </td>
+          <td style="text-align:left;width:89.69mm; " class="ce8">
+             <p>Compras – Ghabriel </p>
+          </td>
+          <td style="text-align:left;width:3.19mm; " class="ce3"> </td>
+          <td style="text-align:left;width:3.51mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce7">
+             <p>243</p>
+          </td>
+          <td style="text-align:left;width:6.09mm; " class="ce3"> </td>
+          <td style="text-align:left;width:84.58mm; " class="ce8">
+             <p>Prestação de contas 1</p>
+          </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+       </tr>
+       <tr class="ro4">
+          <td style="text-align:left;width:7.67mm; " class="ce3"> </td>
+          <td style="text-align:left;width:8.01mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce6">
+             <p>218</p>
+          </td>
+          <td style="text-align:left;width:6.4mm; " class="ce3"> </td>
+          <td style="text-align:left;width:89.69mm; " class="ce9">
+             <p>Compras 1</p>
+          </td>
+          <td style="text-align:left;width:3.19mm; " class="ce3"> </td>
+          <td style="text-align:left;width:3.51mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce7">
+             <p>239</p>
+          </td>
+          <td style="text-align:left;width:6.09mm; " class="ce3"> </td>
+          <td style="text-align:left;width:84.58mm; " class="ce8">
+             <p>Prestação de contas 2 </p>
+          </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+       </tr>
+       <tr class="ro4">
+          <td style="text-align:left;width:7.67mm; " class="ce3"> </td>
+          <td style="text-align:left;width:8.01mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce7">
+             <p>202</p>
+          </td>
+          <td style="text-align:left;width:6.4mm; " class="ce3"> </td>
+          <td style="text-align:left;width:89.69mm; " class="ce9">
+             <p>Compras 2</p>
+          </td>
+          <td style="text-align:left;width:3.19mm; " class="ce3"> </td>
+          <td style="text-align:left;width:3.51mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce7">
+             <p>251</p>
+          </td>
+          <td style="text-align:left;width:6.09mm; " class="ce3"> </td>
+          <td style="text-align:left;width:84.58mm; " class="ce8">
+             <p>Prestação de contas 3</p>
+          </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+       </tr>
+       <tr class="ro4">
+          <td style="text-align:left;width:7.67mm; " class="ce3"> </td>
+          <td style="text-align:left;width:8.01mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce7">
+             <p>215</p>
+          </td>
+          <td style="text-align:left;width:6.4mm; " class="ce3"> </td>
+          <td style="text-align:left;width:89.69mm; " class="ce8">
+             <p>Compras 3</p>
+          </td>
+          <td style="text-align:left;width:3.19mm; " class="ce3"> </td>
+          <td style="text-align:left;width:3.51mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce7">
+             <p>9</p>
+          </td>
+          <td style="text-align:left;width:6.09mm; " class="ce3"> </td>
+          <td style="text-align:left;width:84.58mm; " class="ce8">
+             <p>Recepção 1</p>
+          </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+       </tr>
+       <tr class="ro4">
+          <td style="text-align:left;width:7.67mm; " class="ce3"> </td>
+          <td style="text-align:left;width:8.01mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce7">
+             <p>209</p>
+          </td>
+          <td style="text-align:left;width:6.4mm; " class="ce3"> </td>
+          <td style="text-align:left;width:89.69mm; " class="ce8">
+             <p>Contabilidade – Thiago</p>
+          </td>
+          <td style="text-align:left;width:3.19mm; " class="ce3"> </td>
+          <td style="text-align:left;width:3.51mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce7">
+             <p>200</p>
+          </td>
+          <td style="text-align:left;width:6.09mm; " class="ce3"> </td>
+          <td style="text-align:left;width:84.58mm; " class="ce8">
+             <p>Recepção 2</p>
+          </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+       </tr>
+       <tr class="ro4">
+          <td style="text-align:left;width:7.67mm; " class="ce3"> </td>
+          <td style="text-align:left;width:8.01mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce7">
+             <p>208</p>
+          </td>
+          <td style="text-align:left;width:6.4mm; " class="ce3"> </td>
+          <td style="text-align:left;width:89.69mm; " class="ce8">
+             <p>Contabilidade </p>
+          </td>
+          <td style="text-align:left;width:3.19mm; " class="ce3"> </td>
+          <td style="text-align:left;width:3.51mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce7">
+             <p>201</p>
+          </td>
+          <td style="text-align:left;width:6.09mm; " class="ce3"> </td>
+          <td style="text-align:left;width:84.58mm; " class="ce8">
+             <p>Reginaldo / Controladoria </p>
+          </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+       </tr>
+       <tr class="ro4">
+          <td style="text-align:left;width:7.67mm; " class="ce3"> </td>
+          <td style="text-align:left;width:8.01mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce7">
+             <p>221</p>
+          </td>
+          <td style="text-align:left;width:6.4mm; " class="ce3"> </td>
+          <td style="text-align:left;width:89.69mm; " class="ce8">
+             <p>Contratos / Protocolos</p>
+          </td>
+          <td style="text-align:left;width:3.19mm; " class="ce3"> </td>
+          <td style="text-align:left;width:3.51mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce7">
+             <p>204</p>
+          </td>
+          <td style="text-align:left;width:6.09mm; " class="ce3"> </td>
+          <td style="text-align:left;width:84.58mm; " class="ce8">
+             <p>Rouparia</p>
+          </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+       </tr>
+       <tr class="ro4">
+          <td style="text-align:left;width:7.67mm; " class="ce3"> </td>
+          <td style="text-align:left;width:8.01mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce7">
+             <p>223</p>
+          </td>
+          <td style="text-align:left;width:6.4mm; " class="ce3"> </td>
+          <td style="text-align:left;width:89.69mm; " class="ce8">
+             <p>Convênios – Carol</p>
+          </td>
+          <td style="text-align:left;width:3.19mm; " class="ce3"> </td>
+          <td style="text-align:left;width:3.51mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce7">
+             <p>230</p>
+          </td>
+          <td style="text-align:left;width:6.09mm; " class="ce3"> </td>
+          <td style="text-align:left;width:84.58mm; " class="ce8">
+             <p>Frei Paulo</p>
+          </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+       </tr>
+       <tr class="ro4">
+          <td style="text-align:left;width:7.67mm; " class="ce3"> </td>
+          <td style="text-align:left;width:8.01mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce7">
+             <p>227</p>
+          </td>
+          <td style="text-align:left;width:6.4mm; " class="ce3"> </td>
+          <td style="text-align:left;width:89.69mm; " class="ce8">
+             <p>Confecção</p>
+          </td>
+          <td style="text-align:left;width:3.19mm; " class="ce3"> </td>
+          <td style="text-align:left;width:3.51mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce7">
+             <p>231</p>
+          </td>
+          <td style="text-align:left;width:6.09mm; " class="ce3"> </td>
+          <td style="text-align:left;width:84.58mm; " class="ce8">
+             <p>Sala de atendimento 1</p>
+          </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+       </tr>
+       <tr class="ro4">
+          <td style="text-align:left;width:7.67mm; " class="ce3"> </td>
+          <td style="text-align:left;width:8.01mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce7">
+             <p>214</p>
+          </td>
+          <td style="text-align:left;width:6.4mm; " class="ce3"> </td>
+          <td style="text-align:left;width:89.69mm; " class="ce8">
+             <p>Cozinha</p>
+          </td>
+          <td style="text-align:left;width:3.19mm; " class="ce3"> </td>
+          <td style="text-align:left;width:3.51mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce7">
+             <p>206</p>
+          </td>
+          <td style="text-align:left;width:6.09mm; " class="ce3"> </td>
+          <td style="text-align:left;width:84.58mm; " class="ce8">
+             <p>Sala de atendimento 2</p>
+          </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+       </tr>
+       <tr class="ro4">
+          <td style="text-align:left;width:7.67mm; " class="ce3"> </td>
+          <td style="text-align:left;width:8.01mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce7">
+             <p>232</p>
+          </td>
+          <td style="text-align:left;width:6.4mm; " class="ce3"> </td>
+          <td style="text-align:left;width:89.69mm; " class="ce8">
+             <p>Deco / Marlon Carrasco</p>
+          </td>
+          <td style="text-align:left;width:3.19mm; " class="ce3"> </td>
+          <td style="text-align:left;width:3.51mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce7">
+             <p>233</p>
+          </td>
+          <td style="text-align:left;width:6.09mm; " class="ce3"> </td>
+          <td style="text-align:left;width:84.58mm; " class="ce8">
+             <p>Sala de reunião</p>
+          </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+       </tr>
+       <tr class="ro4">
+          <td style="text-align:left;width:7.67mm; " class="ce3"> </td>
+          <td style="text-align:left;width:8.01mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce7">
+             <p>211</p>
+          </td>
+          <td style="text-align:left;width:6.4mm; " class="ce3"> </td>
+          <td style="text-align:left;width:89.69mm; " class="ce8">
+             <p>Departamento pessoal – Pedro</p>
+          </td>
+          <td style="text-align:left;width:3.19mm; " class="ce3"> </td>
+          <td style="text-align:left;width:3.51mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce7">
+             <p>224</p>
+          </td>
+          <td style="text-align:left;width:6.09mm; " class="ce3"> </td>
+          <td style="text-align:left;width:84.58mm; " class="ce8">
+             <p>Serralheria</p>
+          </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+       </tr>
+       <tr class="ro4">
+          <td style="text-align:left;width:7.67mm; " class="ce3"> </td>
+          <td style="text-align:left;width:8.01mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce7">
+             <p>225</p>
+          </td>
+          <td style="text-align:left;width:6.4mm; " class="ce3"> </td>
+          <td style="text-align:left;width:89.69mm; " class="ce8">
+             <p>Departamento pessoal</p>
+          </td>
+          <td style="text-align:left;width:3.19mm; " class="ce3"> </td>
+          <td style="text-align:left;width:3.51mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce7">
+             <p>252</p>
+          </td>
+          <td style="text-align:left;width:6.09mm; " class="ce3"> </td>
+          <td style="text-align:left;width:84.58mm; " class="ce8">
+             <p>SESMT</p>
+          </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+       </tr>
+       <tr class="ro4">
+          <td style="text-align:left;width:7.67mm; " class="ce3"> </td>
+          <td style="text-align:left;width:8.01mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce7">
+             <p>241</p>
+          </td>
+          <td style="text-align:left;width:6.4mm; " class="ce3"> </td>
+          <td style="text-align:left;width:89.69mm; " class="ce8">
+             <p>Dr. Guilherme</p>
+          </td>
+          <td style="text-align:left;width:3.19mm; " class="ce3"> </td>
+          <td style="text-align:left;width:3.51mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce7">
+             <p>250</p>
+          </td>
+          <td style="text-align:left;width:6.09mm; " class="ce3"> </td>
+          <td style="text-align:left;width:84.58mm; " class="ce8">
+             <p>Tem de tudo – Renata</p>
+          </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+       </tr>
+       <tr class="ro4">
+          <td style="text-align:left;width:7.67mm; " class="ce3"> </td>
+          <td style="text-align:left;width:8.01mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce7">
+             <p>222</p>
+          </td>
+          <td style="text-align:left;width:6.4mm; " class="ce3"> </td>
+          <td style="text-align:left;width:89.69mm; " class="ce8">
+             <p>Financeiro – Edmilson</p>
+          </td>
+          <td style="text-align:left;width:3.19mm; " class="ce3"> </td>
+          <td style="text-align:left;width:3.51mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce7">
+             <p>247</p>
+          </td>
+          <td style="text-align:left;width:6.09mm; " class="ce3"> </td>
+          <td style="text-align:left;width:84.58mm; " class="ce8">
+             <p>T.i Infraestrutura - Daniel</p>
+          </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+       </tr>
+       <tr class="ro4">
+          <td style="text-align:left;width:7.67mm; " class="ce3"> </td>
+          <td style="text-align:left;width:8.01mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce7">
+             <p>219</p>
+          </td>
+          <td style="text-align:left;width:6.4mm; " class="ce3"> </td>
+          <td style="text-align:left;width:89.69mm; " class="ce8">
+             <p>Financeiro – Fernando/Ricardo</p>
+          </td>
+          <td style="text-align:left;width:3.19mm; " class="ce3"> </td>
+          <td style="text-align:left;width:3.51mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce7">
+             <p>248</p>
+          </td>
+          <td style="text-align:left;width:6.09mm; " class="ce3"> </td>
+          <td style="text-align:left;width:84.58mm; " class="ce8">
+             <p>T.i Infrastrutura - Luiz Eduardo</p>
+          </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+       </tr>
+       <tr class="ro4">
+          <td style="text-align:left;width:7.67mm; " class="ce3"> </td>
+          <td style="text-align:left;width:8.01mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce7">
+             <p>203</p>
+          </td>
+          <td style="text-align:left;width:6.4mm; " class="ce3"> </td>
+          <td style="text-align:left;width:89.69mm; " class="ce8">
+             <p>Financeiro 1</p>
+          </td>
+          <td style="text-align:left;width:3.19mm; " class="ce3"> </td>
+          <td style="text-align:left;width:3.51mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce7">
+             <p>249</p>
+          </td>
+          <td style="text-align:left;width:6.09mm; " class="ce3"> </td>
+          <td style="text-align:left;width:84.58mm; " class="ce8">
+             <p>T.i Sistemas - Caire/Luiz Caiel </p>
+          </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+       </tr>
+       <tr class="ro4">
+          <td style="text-align:left;width:7.67mm; " class="ce3"> </td>
+          <td style="text-align:left;width:8.01mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce7">
+             <p>238</p>
+          </td>
+          <td style="text-align:left;width:6.4mm; " class="ce3"> </td>
+          <td style="text-align:left;width:89.69mm; " class="ce8">
+             <p>Financeiro 2</p>
+          </td>
+          <td style="text-align:left;width:3.19mm; " class="ce3"> </td>
+          <td style="text-align:left;width:3.51mm; " class="ce3"> </td>
+          <td style="text-align:right; width:29.14mm; " class="ce7">
+             <p>229</p>
+          </td>
+          <td style="text-align:left;width:6.09mm; " class="ce3"> </td>
+          <td style="text-align:left;width:84.58mm; " class="ce8">
+             <p>T.i Sistemas - Fabio/Caire </p>
+          </td>
+          <td style="text-align:left;width:12.49mm; " class="Default"> </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+       </tr>
+       <tr class="ro5">
+          <td style="text-align:left;width:7.67mm; " class="ce3"> </td>
+          <td style="text-align:left;width:8.01mm; " class="ce3"> </td>
+          <td style="text-align:left;width:29.14mm; " class="Default"> </td>
+          <td style="text-align:left;width:6.4mm; " class="Default"> </td>
+          <td style="text-align:left;width:89.69mm; " class="Default"> </td>
+          <td style="text-align:left;width:3.19mm; " class="Default"> </td>
+          <td style="text-align:left;width:3.51mm; " class="ce3"> </td>
+          <td style="text-align:left;width:29.14mm; " class="Default"> </td>
+          <td style="text-align:left;width:6.09mm; " class="Default"> </td>
+          <td style="text-align:left;width:84.58mm; " class="Default"> </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+          <td style="text-align:left;width:12.49mm; " class="ce3"> </td>
+       </tr>
+       <tr class="ro4">
+          <td style="text-align:left;width:7.67mm; " class="Default"> </td>
+          <td style="text-align:left;width:8.01mm; " class="Default"> </td>
+          <td style="text-align:left;width:29.14mm; " class="Default"> </td>
+          <td style="text-align:left;width:6.4mm; " class="Default"> </td>
+          <td style="text-align:left;width:89.69mm; " class="Default"> </td>
+          <td style="text-align:left;width:3.19mm; " class="ce24"> </td>
+          <td style="text-align:left;width:3.51mm; " class="Default"> </td>
+          <td style="text-align:left;width:29.14mm; " class="ce3"> </td>
+          <td style="text-align:left;width:6.09mm; " class="ce3"> </td>
+          <td style="text-align:left;width:84.58mm; " class="ce41"> </td>
+          <td style="text-align:left;width:12.49mm; " class="Default"> </td>
+          <td style="text-align:left;width:12.49mm; " class="Default"> </td>
+       </tr>
+       <tr class="ro5">
+          <td style="text-align:left;width:7.67mm; " class="Default"> </td>
+          <td style="text-align:left;width:8.01mm; " class="Default"> </td>
+          <td style="text-align:left;width:29.14mm; " class="Default"> </td>
+          <td style="text-align:left;width:6.4mm; " class="Default"> </td>
+          <td style="text-align:left;width:89.69mm; " class="Default"> </td>
+          <td style="text-align:left;width:3.19mm; " class="ce24"> </td>
+          <td style="text-align:left;width:3.51mm; " class="Default"> </td>
+          <td style="text-align:left;width:29.14mm; " class="Default"> </td>
+          <td style="text-align:left;width:6.09mm; " class="Default"> </td>
+          <td style="text-align:left;width:84.58mm; " class="Default"> </td>
+          <td style="text-align:left;width:12.49mm; " class="Default"> </td>
+          <td style="text-align:left;width:12.49mm; " class="Default"> </td>
+       </tr>
+       <tr class="ro5">
+          <td style="text-align:left;width:7.67mm; " class="Default"> </td>
+          <td style="text-align:left;width:8.01mm; " class="Default"> </td>
+          <td style="text-align:left;width:29.14mm; " class="Default"> </td>
+          <td style="text-align:left;width:6.4mm; " class="Default"> </td>
+          <td style="text-align:left;width:89.69mm; " class="Default"> </td>
+          <td style="text-align:left;width:3.19mm; " class="ce24"> </td>
+          <td style="text-align:left;width:3.51mm; " class="Default"> </td>
+          <td style="text-align:left;width:29.14mm; " class="Default"> </td>
+          <td style="text-align:left;width:6.09mm; " class="Default"> </td>
+          <td style="text-align:left;width:84.58mm; " class="Default"> </td>
+          <td style="text-align:left;width:12.49mm; " class="Default"> </td>
+          <td style="text-align:left;width:12.49mm; " class="Default"> </td>
+       </tr>
+    </table>
+</div>
+
+<!-- Footer -->
+<footer class="page-footer font-small black">
+
+   <!-- Copyright -->
+   <div class="footer-copyright text-center py-3">© 2020 Copyright:
+     <a href="https://www.franciscanosnaprovidencia.org.br"> Associação Lar São Francisco na Providencia de Deus</a>
+   </div>
+   <!-- Copyright -->
+ 
+ </footer>
+ <!-- Footer -->
+
+
+
+
+
+<script>
+    function criarPopup(){
+    newWindow = window.open ('', 'Manuais');
+    newWindow.document.write ('<h1>Manuais</h1><h3>Click para Baixar</h3>',
+
+    '<ul><br><li><a href="http://172.16.0.10:8080/volume/stream/Rmx1aWc=/P3Q9MSZ2b2w9RGVmYXVsdCZpZD0xMDc2OTcmdmVyPTEwMDAmZmlsZT0xKy0rTWFudWFsK00lQzMlQjNkdWxvK0NvbXByYXMrLStHZXJhcitwZWRpZG8ucGRmJmNyYz0zMzI2NDc5MTcwJnNpemU9My4xNzQzNCZ1SWQ9MTExNTUxJmZTSWQ9NTg1NiZ1U0lkPTU4NTYmZD1mYWxzZSZ0a249JnB1YmxpY1VybD10cnVl.pdf">1-Manual de Compras - Gerar Pedido</a></li>',
+
+    '<br><li><a href="http://172.16.0.10:8080/volume/stream/Rmx1aWc=/P3Q9MSZ2b2w9RGVmYXVsdCZpZD0xMDc3MTMmdmVyPTEwMDAmZmlsZT0yKy0rTWFudWFsK0ZsdWlnLmRvY3gucGRmJmNyYz0zODExNTE0MzkzJnNpemU9MC45NzY1MTUmdUlkPTExMTU1MSZmU0lkPTU4NTYmdVNJZD01ODU2JmQ9ZmFsc2UmdGtuPSZwdWJsaWNVcmw9dHJ1ZQ==.pdf">2-Manual do Fluig</a></li>',
+
+    '<br><li><a href="http://172.16.0.10:8080/volume/stream/Rmx1aWc=/P3Q9MSZ2b2w9RGVmYXVsdCZpZD0xMDc3MTQmdmVyPTEwMDAmZmlsZT0zKy0rTWFudWFsK2RlK0NhZGFzdHJvK2RlK0Zvcm5lY2Vkb3IuZG9jeC5wZGYmY3JjPTk5NzkwNDE1NSZzaXplPTAuNjMyMzU3JnVJZD0xMTE1NTEmZlNJZD01ODU2JnVTSWQ9NTg1NiZkPWZhbHNlJnRrbj0mcHVibGljVXJsPXRydWU=.pdf">3-Manual Cadastro de Fornecedor</a></li>',
+
+    '<br><li><a href="http://172.16.0.10:8080/volume/stream/Rmx1aWc=/P3Q9MSZ2b2w9RGVmYXVsdCZpZD0xMDc3MTUmdmVyPTEwMDAmZmlsZT00Ky0rQ2FkYXN0cm8rZGUrcHJvZHV0by5wZGYmY3JjPTQwMTI5MDgwOTkmc2l6ZT0wLjc4NTY0JnVJZD0xMTE1NTEmZlNJZD01ODU2JnVTSWQ9NTg1NiZkPWZhbHNlJnRrbj0mcHVibGljVXJsPXRydWU=.pdf">4-Manual Cadastro de Produtos</a></li>',
+
+    '<br><li><a href="http://172.16.0.10:8080/volume/stream/Rmx1aWc=/P3Q9MSZ2b2w9RGVmYXVsdCZpZD0xMDc3MTYmdmVyPTEwMDAmZmlsZT01Ky0rTWFudWFsK1JlbGF0JUMzJUIzcmlvK2RlK3NvbGljaXRhJUMzJUE3JUMzJUEzbytkZStjb21wcmEuZG9jeC5wZGYmY3JjPTE2Nzg3NDU4NjEmc2l6ZT0wLjQ0MDcwNyZ1SWQ9MTExNTUxJmZTSWQ9NTg1NiZ1U0lkPTU4NTYmZD1mYWxzZSZ0a249JnB1YmxpY1VybD10cnVl.pdf">5-Manual de Relatorio de Solicitação de Compras</a></li>',
+
+    '<br><li><a href="http://172.16.0.10:8080/volume/stream/Rmx1aWc=/P3Q9MSZ2b2w9RGVmYXVsdCZpZD0xMDc3MTcmdmVyPTEwMDAmZmlsZT02Ky0rTWFudWFsK1JlbGF0JUMzJUIzcmlvK1NpbnQlQzMlQTl0aWNvLmRvY3gucGRmJmNyYz0zMjYxNDU0MTUwJnNpemU9MC42MjkyNjgmdUlkPTExMTU1MSZmU0lkPTU4NTYmdVNJZD01ODU2JmQ9ZmFsc2UmdGtuPSZwdWJsaWNVcmw9dHJ1ZQ==.pdf">6-Manual de relatorio Sintetico</a></li>',
+
+    '<br><li><a href="http://172.16.0.10:8080/volume/stream/Rmx1aWc=/P3Q9MSZ2b2w9RGVmYXVsdCZpZD0xMDc3MTgmdmVyPTEwMDAmZmlsZT03K01hbnVhbCtkZStlbGltaW5hJUMzJUE3JUMzJUEzbytkZStyZXMlQzMlQURkdW8ucGRmJmNyYz03MDEyMDIyNDEmc2l6ZT0wLjg4NjA4NiZ1SWQ9MTExNTUxJmZTSWQ9NTg1NiZ1U0lkPTU4NTYmZD1mYWxzZSZ0a249JnB1YmxpY1VybD10cnVl.pdf">7-Manual de Eliminação de Residuo</a></li>',
+
+    '<br><li><a href="http://172.16.0.10:8080/volume/stream/Rmx1aWc=/P3Q9MSZ2b2w9RGVmYXVsdCZpZD0xMDc3MTkmdmVyPTEwMDAmZmlsZT04Ky0rTWFudWFsK2RlK0ltcG9ydGElQzMlQTclQzMlQTNvK2RvcytwZWRpZG9zK2RlK2NvbXByYS4ucGRmJmNyYz0zNjc4MDI0MzYxJnNpemU9MC4xODkyNjcmdUlkPTExMTU1MSZmU0lkPTU4NTYmdVNJZD01ODU2JmQ9ZmFsc2UmdGtuPSZwdWJsaWNVcmw9dHJ1ZQ==.pdf">8-Manual de exportação de Pedidos de Compras</a></li>',
+
+    '<br><li><a href="http://172.16.0.10:8080/volume/stream/Rmx1aWc=/P3Q9MSZ2b2w9RGVmYXVsdCZpZD0xMDc3MjImdmVyPTEwMDAmZmlsZT05Ky0rTWFudWFsK0V4cG9ydGElQzMlQTclQzMlQTNvK0Jpb25leG8uLmRvY3gucGRmJmNyYz0xNDg1MTk1MDY4JnNpemU9MC4zNzUxMTkmdUlkPTExMTU1MSZmU0lkPTU4NTYmdVNJZD01ODU2JmQ9ZmFsc2UmdGtuPSZwdWJsaWNVcmw9dHJ1ZQ==.pdf">9-Manual de Exportação Bionexo</a></li>',
+
+    '<br><li><a href="http://172.16.0.10:8080/volume/stream/Rmx1aWc=/P3Q9MSZ2b2w9RGVmYXVsdCZpZD0xMDc3MjMmdmVyPTEwMDAmZmlsZT0xMCstK01hbnVhbCtNJUMzJUIzZHVsbytDb21wcmFzKy0rU29saWNpdGElQzMlQTclQzMlQTNvK2UrUmVsYXQlQzMlQjNyaW9zLnBkZiZjcmM9MTA3MzQzNjkzJnNpemU9MC45NTQ4OTUmdUlkPTExMTU1MSZmU0lkPTU4NTYmdVNJZD01ODU2JmQ9ZmFsc2UmdGtuPSZwdWJsaWNVcmw9dHJ1ZQ==.pdf">10-Manual de Solicitação e Relatorios</a></li>',
+
+    '<br><li><a href="http://172.16.0.10:8080/volume/stream/Rmx1aWc=/P3Q9MSZ2b2w9RGVmYXVsdCZpZD0xMDc3MjQmdmVyPTEwMDAmZmlsZT0xMSstK01hbnVhbCtyZWxhdCVDMyVCM3JpbytkZStTYWxkbytQTVMucGRmJmNyYz0zMjY1MzQzOTk3JnNpemU9MC41OTk2MDgmdUlkPTExMTU1MSZmU0lkPTU4NTYmdVNJZD01ODU2JmQ9ZmFsc2UmdGtuPSZwdWJsaWNVcmw9dHJ1ZQ==.pdf">11-Manual de Relatorio de Saldo PMS</a></li>'
+    );
+    }
+      </script>
+
+    <script language=javascript type= "text/javascript">
+        newpopupWindow = window.open ('', 'pagina', "width=250 height=250");
+        newpopupWindow.document.write ('<h3 align="center">Manual do GLPI</h3><br>','<h4 align="center"><a href="http://172.16.0.10:8080/volume/stream/Rmx1aWc=/P3Q9MSZ2b2w9RGVmYXVsdCZpZD0xMDc3MzcmdmVyPTEwMDAmZmlsZT1DaGFtYWRvcystK1VzdSVDMyVBMXJpb3NfQmFzaWNvcysxMy5wZGYmY3JjPTI1MDcyNDE0OTUmc2l6ZT0wLjc2MTImdUlkPTExMTU1MSZmU0lkPTU4NTYmdVNJZD01ODU2JmQ9ZmFsc2UmdGtuPSZwdWJsaWNVcmw9dHJ1ZQ==.pdf">click aqui para visualizar</a></h4><br><p align="center">OBS* Sempre Verificar se seu chamado já foi Finalizado</p>');
+    </script>
+
+</body>
+</html>
